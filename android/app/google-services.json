@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "238001685892",
+    "project_id": "mynativeapp-9a631",
+    "storage_bucket": "mynativeapp-9a631.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:238001685892:android:ec0068b7123452995589d1",
+        "android_client_info": {
+          "package_name": "com.mynativeapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqGkhRlKwSp9PzczH_9cTi9k9GrI_T_B0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
