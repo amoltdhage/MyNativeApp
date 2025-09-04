@@ -13,7 +13,7 @@ import { useNavigation } from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
 import Feather from 'react-native-vector-icons/Feather';
-
+import { showMessage } from 'react-native-flash-message';
 const TOTAL_DAYS = 21;
 
 const HomeScreen = () => {
@@ -51,6 +51,13 @@ const HomeScreen = () => {
   }));
 
   const handleDayPress = (day) => {
+    showMessage({
+    message: 'Coming Soon 🚀',
+    description: 'This feature is under development. Stay tuned for updates!',
+    type: 'info',       // blue color toast
+    floating: true,
+    duration: 3000,
+  });
     if (!day.isActive) {
       Alert.alert('Locked', `Day ${day.dayNumber} will unlock later!`);
       return;
@@ -59,6 +66,13 @@ const HomeScreen = () => {
   };
 
   const handleViewPdf = () => {
+    showMessage({
+    message: 'Coming Soon 🚀',
+    description: 'This feature is under development. Stay tuned for updates!',
+    type: 'info',       // blue color toast
+    floating: true,
+    duration: 3000,
+  });
     navigation.navigate('PdfViewer', { pdfUrl: 'https://example.com/plan.pdf' });
   };
 
@@ -78,9 +92,6 @@ const HomeScreen = () => {
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity onPress={handleMenuPress}>
-          <Feather name="menu" size={28} color="#fff" />
-        </TouchableOpacity>
         <View style={styles.greetingContainer}>
           <Text style={styles.greeting}>Hey {userName} 👋</Text>
           <View style={styles.dot} />
