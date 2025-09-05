@@ -57,6 +57,7 @@ export default function LoginScreen({ navigation }) {
         keyboardType="email-address"
         autoCapitalize="none"
         onChangeText={setEmail}
+        placeholderTextColor="gray"
       />
 
       <View style={styles.passwordContainer}>
@@ -66,6 +67,7 @@ export default function LoginScreen({ navigation }) {
           value={password}
           secureTextEntry={!showPassword}
           onChangeText={setPassword}
+          placeholderTextColor="gray"
         />
         <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
           <Feather name={showPassword ? 'eye' : 'eye-off'} size={20} color="#FF69B4" />
@@ -96,6 +98,7 @@ const styles = StyleSheet.create({
     padding: 12,
     borderRadius: 25,
     backgroundColor: '#fff',
+    color: "#000"
   },
   passwordContainer: {
     flexDirection: 'row',
@@ -110,7 +113,8 @@ const styles = StyleSheet.create({
   passwordInput: {
     flex: 1,
     paddingVertical: 12,
-    paddingHorizontal: 0, // padding horizontal handled by container
+    paddingHorizontal: 0,
+    color: "#000"
   },
   loginButton: {
     backgroundColor: '#FF4081',
